@@ -37,3 +37,10 @@ if (config.env === 'development') {
 }
 
 module.exports = router;
+router.get('/ping', (req, res) => {
+  res.json({
+    message: 'pong',
+    deployedBy: 'Mark',
+    time: new Date().toISOString(),
+  });
+});
